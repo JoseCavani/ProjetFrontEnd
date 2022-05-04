@@ -55,28 +55,74 @@ text-align: center;
     <input type="text" name="Input" Size="15" id="display">
       <div class = "allActions">
        <div class = "actions0">
-  <input type="button" value="0">
-  <input type="button" value="1">
-  <input type="button" value="2">
-  <input type="button" value="*">
+  <input type="button" value="0" onclick="FuncaoNumeros('0')">
+  <input type="button" value="1" onclick="FuncaoNumeros('1')">
+  <input type="button" value="2" onclick="FuncaoNumeros('2')">
+  <input type="button" value="*" onclick="FuncaoOperador('*')">
 </div>
 <div class = "actions1">
-    <input type="button" value="4">
-    <input type="button" value="5">
-    <input type="button" value="6">
-    <input type="button" value="+">
+    <input type="button" value="4"onclick="FuncaoNumeros('4')">
+    <input type="button" value="5"onclick="FuncaoNumeros('5')">
+    <input type="button" value="6"onclick="FuncaoNumeros('6')">
+    <input type="button" value="+"onclick="FuncaoOperador('+')">
   </div>
   <div class = "actions2">
-    <input type="button" value="7">
-    <input type="button" value="8">
-    <input type="button" value="9">
-    <input type="button" value="-">
+    <input type="button" value="7"onclick="FuncaoNumeros('7')">
+    <input type="button" value="8"onclick="FuncaoNumeros('8')">
+    <input type="button" value="9"onclick="FuncaoNumeros('9')">
+    <input type="button" value="-"onclick="FuncaoOperador('-')">
   </div>
     <div class = "actions4"> 
-         <input type="button" value="C">
-         <input type="button" value=",">
-         <input type="button" value="/">
+         <input type="button" value="C"onclick="FuncaoOperador('C')">
+         <input type="button" value=","onclick="FuncaoOperador(',')">
+         <input type="button" value="/"onclick="FuncaoOperador('/')">
    </div>
    </div>
+   
+   <script>
+     var op = null;
+  var FuncaoOperador = function(operador) 
+      {
+        op = operador;
+        if (op == 'C'){
+        op = null;
+        document.getElementById('display').value = "";
+        }
+      }
+
+
+      var FuncaoNumeros = function(value) 
+      {
+      
+        
+        if ( op == null)
+        document.getElementById('display').value = value;
+        else
+        var numero2 = value;
+
+        switch(op){
+          case '*': 
+          document.getElementById('display').value = (document.getElementById('display').value * numero2);
+          break;
+
+          case '+' :
+          document.getElementById('display').value = (+document.getElementById('display').value + +numero2);
+          break;
+
+          case '-' :
+          document.getElementById('display').value = (document.getElementById('display').value - numero2);
+          break;
+
+          case '/' :
+          document.getElementById('display').value = (document.getElementById('display').value / numero2);
+          break;
+
+          case ',' :
+          document.getElementById('display').value = (+document.getElementById('display').value + +(numero2/10)).toFixed(2);
+          break;
+        }
+    
+      }
+   </script>
    </body>
 </html>   
