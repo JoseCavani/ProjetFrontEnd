@@ -61,21 +61,21 @@ text-align: center;
   <input type="button" value="*" onclick="FuncaoOperador('*')">
 </div>
 <div class = "actions1">
-    <input type="button" value="4"onclick="FuncaoNumeros('4')">
-    <input type="button" value="5"onclick="FuncaoNumeros('5')">
-    <input type="button" value="6"onclick="FuncaoNumeros('6')">
-    <input type="button" value="+"onclick="FuncaoOperador('+')">
+   <input type="button" value="4" onclick="FuncaoNumeros('4')">
+   <input type="button" value="5" onclick="FuncaoNumeros('5')">
+   <input type="button" value="6" onclick="FuncaoNumeros('6')">
+   <input type="button" value="+" onclick="FuncaoOperador('+')">
   </div>
   <div class = "actions2">
-    <input type="button" value="7"onclick="FuncaoNumeros('7')">
-    <input type="button" value="8"onclick="FuncaoNumeros('8')">
-    <input type="button" value="9"onclick="FuncaoNumeros('9')">
-    <input type="button" value="-"onclick="FuncaoOperador('-')">
+   <input type="button" value="7" onclick="FuncaoNumeros('7')">
+   <input type="button" value="8" onclick="FuncaoNumeros('8')">
+   <input type="button" value="9" onclick="FuncaoNumeros('9')">
+   <input type="button" value="-" onclick="FuncaoOperador('-')">
   </div>
-    <div class = "actions4"> 
-         <input type="button" value="C"onclick="FuncaoOperador('C')">
-         <input type="button" value=","onclick="FuncaoOperador(',')">
-         <input type="button" value="/"onclick="FuncaoOperador('/')">
+  <div class = "actions4"> 
+   <input type="button" value="C" onclick="FuncaoOperador('C')">
+   <input type="button" value="," onclick="FuncaoOperador(',')">
+   <input type="button" value="/" onclick="FuncaoOperador('/')">
    </div>
    </div>
    
